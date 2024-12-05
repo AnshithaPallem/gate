@@ -115,7 +115,44 @@ print(arr)  # Output: [10, 20, 30, 50]
 We can traverse over an array and search for an element.
 
 def find_element(arr, n, key):
+
     for i in range(n):
+    
         if arr[i] == key:
+        
             return i
+            
     return -1
+
+## Time Complexity:
+
+![Screenshot 2024-12-05 122332](https://github.com/user-attachments/assets/ced2528c-fa4e-4aff-816a-de927fc83e73)
+
+## Space Complexity:
+
+![Screenshot 2024-12-05 122402](https://github.com/user-attachments/assets/ccd2e4ea-e8a5-4448-b7c2-ba9e01a198d2)
+
+## Advantages of Array
+Arrays allow **random access** to elements. This makes accessing elements by position faster.
+
+Arrays have **better cache locality** which makes a pretty big difference in performance.
+
+Arrays **represent multiple data items of the same type** using a single name.
+Arrays are used to implement the other data structures like linked lists, stacks, queues, trees, graphs, etc.
+
+## Disadvantages of Array
+As arrays have a fixed size, once the memory is allocated to them, it cannot be increased or decreased, making it impossible to store extra data if required. An array of fixed size is referred to as a static array. 
+
+Allocating less memory than required to an array leads to loss of data.
+
+An array is homogeneous in nature so, a single array cannot store values of different data types. 
+
+Arrays store data in contiguous memory locations, which makes deletion and insertion very difficult to implement. This problem is overcome by implementing linked lists, which allow elements to be accessed sequentially.  
+
+## Applications of Array
+They are used in the implementation of other data structures such as array lists, heaps, hash tables, vectors, and matrices.
+
+Database records are usually implemented as arrays.
+
+It is used in lookup tables by computer.
+
