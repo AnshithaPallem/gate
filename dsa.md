@@ -53,11 +53,15 @@ The size of the array changes as per user requirements during execution of code 
 arr = []
 
 ### Types of Arrays on the basis of Dimensions:
-**1. One-dimensional Array(1-D Array):** You can imagine a 1d array as a row, where elements are stored one after another.
+### 1. One-dimensional Array(1-D Array):
+
+You can imagine a 1d array as a row, where elements are stored one after another.
 
 ![Screenshot 2024-12-05 121248](https://github.com/user-attachments/assets/f55f3107-e231-49ff-9667-a953413dd269)
 
-**2. Multi-dimensional Array:** A multi-dimensional array is an array with more than one dimension. We can use multidimensional array to store complex data in the form of tables, etc. We can have 2-D arrays, 3-D arrays, 4-D arrays and so on.
+### 2. Multi-dimensional Array:
+
+A multi-dimensional array is an array with more than one dimension. We can use multidimensional array to store complex data in the form of tables, etc. We can have 2-D arrays, 3-D arrays, 4-D arrays and so on.
 
 **Two-Dimensional Array(2-D Array or Matrix):** 2-D Multidimensional arrays can be considered as an array of arrays or as a matrix consisting of rows and columns.
 
@@ -67,4 +71,51 @@ arr = []
 
 ![Screenshot 2024-12-05 121519](https://github.com/user-attachments/assets/a4dcfad6-fa67-49a8-a7a6-a933c2f64e46)
 
+## Operations on Array
+### 1. Array Traversal:
+Array traversal involves visiting all the elements of the array once.
 
+arr = [1, 2, 3, 4, 5]
+
+for i in range(len(arr)):
+
+    print(arr[i], end=" ")
+
+### 2. Insertion in Array:
+We can insert one or multiple elements at any position in the array.
+
+arr = [1, 2, 3, 4, 5]
+
+x = 10  # Element to be inserted
+
+pos = 2  # Position to insert the element
+
+arr.insert(pos, x)
+
+print("Updated List:", arr)
+
+### 3. Deletion in Array:
+We can delete an element at any index in an array.
+
+arr = [10, 20, 30, 40, 50]
+
+key = 40
+
+if key in arr:
+
+   arr.remove(key)
+   
+else:
+
+   print("Element Not Found")
+
+print(arr)  # Output: [10, 20, 30, 50]
+
+### 4. Searching in Array:
+We can traverse over an array and search for an element.
+
+def find_element(arr, n, key):
+    for i in range(n):
+        if arr[i] == key:
+            return i
+    return -1
