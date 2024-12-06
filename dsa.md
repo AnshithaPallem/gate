@@ -19,140 +19,42 @@ A data structure is a storage that is used to store and organize data. It is a w
 
 **Examples:** Trees and Graphs.
 
-# Array
+### 1. Array
 Array is a linear data structure that stores a collection of elements of the same data type. Elements are allocated contiguous memory, allowing for constant-time access. Each element has a unique index number.
 
-![Screenshot 2024-12-05 120035](https://github.com/user-attachments/assets/373b251a-dd92-462d-94bd-79361fe1bc77)
+### 2. Matrix/Grid
+Matrix is a two-dimensional array of elements, arranged in rows and columns. It is represented as a rectangular grid, with each element at the intersection of a row and column.
 
-## Declaration of Array
-arr = []
+### 3. String
+String is a sequence of characters, typically used to represent text. It is considered a data type that allows for the manipulation and processing of textual data in computer programs.
 
-## Initialization of Array
-arr = [1, 2, 3, 4, 5]
+### 4. Stack
+Stack is a linear data structure that follows the **Last In, First Out (LIFO)** principle. Stacks play an important role in managing function calls, memory, and are widely used in algorithms, web development, and systems like compilers and browsers.
 
-arr = ['a', 'b', 'c', 'd', 'e']
+### 5. Queue
+Queue is a linear data structure that follows the **First In, First Out (FIFO)** principle. Queues play an important role in managing tasks or data in order, scheduling and message handling systems.
 
-arr = [1.4, 2.0, 24.0, 5.0, 0.0] 
+### 6. Linked List
+Linked list is a linear data structure that stores data in nodes, which are connected by pointers. Unlike arrays, nodes of linked lists are not stored in contiguous memory locations and can only be accessed sequentially, starting from the head of list.
 
-## Types of Arrays
-### Types of Arrays on the basis of Size:
-### 1. Fixed Sized Arrays:
+### 7. Hash
+Hashing is a technique that generates a fixed-size output (hash value) from an input of variable size using mathematical formulas called hash functions. Hashing is commonly used in data structures for efficient searching, insertion and deletion and plays a key role in software applications like secure data retrieval, password storage, cryptography, digital signatures, etc.
 
-We cannot alter or update the size of this array. Here only a fixed size (i,e. the size that is mentioned in square brackets []) of memory will be allocated for storage. In case, we don’t know the size of the array then if we declare a larger size and store a lesser number of elements will result in a wastage of memory or we declare a lesser size than the number of elements then we won’t get enough memory to store all the elements. In such cases, static memory allocation is not preferred.
+### 8. Tree
+Tree is a non-linear, hierarchical data structure consisting of nodes connected by edges, with a top node called the root and nodes having child nodes. It is widely used in file systems, databases, decision-making algorithms, etc.
 
-**Ex:** 
+### 9. Binary Tree
+Binary Tree is a non-linear and hierarchical data structure where each node has at most two children referred to as the left child and the right child.
 
-arr = [0] * 5
+### 10. Binary Search Tree
+Binary Search Tree is a type of binary tree in which each node's left subtree contains only values smaller than the node, and each node's right subtree contains only values greater than the node. This property applies recursively, meaning that for every node, its left and right subtrees must also satisfy the conditions of a valid Binary Search Tree.
 
-print(arr)
+### 11. Heap
+Heap is a complete binary tree data structure that satisfies the heap property. Heaps are usually used to implement priority queues, where the smallest or largest element is always at the root of the tree.
 
-### 2. Dynamic Sized Arrays:
+### 12. Graph
+Graph is a non-linear data structure consisting of a finite set of vertices(or nodes) and a set of edges(or links)that connect a pair of nodes. Graphs are widely used to represent relationships between entities.
 
-The size of the array changes as per user requirements during execution of code so the coders do not have to worry about sizes. They can add and removed the elements as per the need. The memory is mostly dynamically allocated and de-allocated in these arrays.
-
-arr = []
-
-### Types of Arrays on the basis of Dimensions:
-### 1. One-dimensional Array(1-D Array):
-
-You can imagine a 1d array as a row, where elements are stored one after another.
-
-![Screenshot 2024-12-05 121248](https://github.com/user-attachments/assets/f55f3107-e231-49ff-9667-a953413dd269)
-
-### 2. Multi-dimensional Array:
-
-A multi-dimensional array is an array with more than one dimension. We can use multidimensional array to store complex data in the form of tables, etc. We can have 2-D arrays, 3-D arrays, 4-D arrays and so on.
-
-**Two-Dimensional Array(2-D Array or Matrix):** 2-D Multidimensional arrays can be considered as an array of arrays or as a matrix consisting of rows and columns.
-
-![Screenshot 2024-12-05 121440](https://github.com/user-attachments/assets/c41e7807-35b7-46fa-9205-51bf839a2604)
-
-**Three-Dimensional Array(3-D Array):** A 3-D Multidimensional array contains three dimensions, so it can be considered an array of two-dimensional arrays.
-
-![Screenshot 2024-12-05 121519](https://github.com/user-attachments/assets/a4dcfad6-fa67-49a8-a7a6-a933c2f64e46)
-
-## Operations on Array
-### 1. Array Traversal:
-Array traversal involves visiting all the elements of the array once.
-
-arr = [1, 2, 3, 4, 5]
-
-for i in range(len(arr)):
-
-    print(arr[i], end=" ")
-
-### 2. Insertion in Array:
-We can insert one or multiple elements at any position in the array.
-
-arr = [1, 2, 3, 4, 5]
-
-x = 10  # Element to be inserted
-
-pos = 2  # Position to insert the element
-
-arr.insert(pos, x)
-
-print("Updated List:", arr)
-
-### 3. Deletion in Array:
-We can delete an element at any index in an array.
-
-arr = [10, 20, 30, 40, 50]
-
-key = 40
-
-if key in arr:
-
-   arr.remove(key)
-   
-else:
-
-   print("Element Not Found")
-
-print(arr)  # Output: [10, 20, 30, 50]
-
-### 4. Searching in Array:
-We can traverse over an array and search for an element.
-
-def find_element(arr, n, key):
-
-    for i in range(n):
-    
-        if arr[i] == key:
-        
-            return i
-            
-    return -1
-
-## Time Complexity:
-
-![Screenshot 2024-12-05 122332](https://github.com/user-attachments/assets/ced2528c-fa4e-4aff-816a-de927fc83e73)
-
-## Space Complexity:
-
-![Screenshot 2024-12-05 122402](https://github.com/user-attachments/assets/ccd2e4ea-e8a5-4448-b7c2-ba9e01a198d2)
-
-## Advantages of Array
-Arrays allow **random access** to elements. This makes accessing elements by position faster.
-
-Arrays have **better cache locality** which makes a pretty big difference in performance.
-
-Arrays **represent multiple data items of the same type** using a single name.
-Arrays are used to implement the other data structures like linked lists, stacks, queues, trees, graphs, etc.
-
-## Disadvantages of Array
-As arrays have a fixed size, once the memory is allocated to them, it cannot be increased or decreased, making it impossible to store extra data if required. An array of fixed size is referred to as a static array. 
-
-Allocating less memory than required to an array leads to loss of data.
-
-An array is homogeneous in nature so, a single array cannot store values of different data types. 
-
-Arrays store data in contiguous memory locations, which makes deletion and insertion very difficult to implement. This problem is overcome by implementing linked lists, which allow elements to be accessed sequentially.  
-
-## Applications of Array
-They are used in the implementation of other data structures such as array lists, heaps, hash tables, vectors, and matrices.
-
-Database records are usually implemented as arrays.
-
-It is used in lookup tables by computer.
+### 13. Advanced Data Structures
+Advanced Data Structures are complex arrangement of data which are used to organize, store, and manipulate data efficiently, enabling faster and more effective processing in complex algorithms. Unlike basic data types such as arrays and linked lists, these structures include more sophisticated options like Segment Trees, Trie, Binary Indexed Tree, Suffix Array etc.
 
